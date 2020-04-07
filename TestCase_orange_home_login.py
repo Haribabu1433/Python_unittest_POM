@@ -9,7 +9,7 @@ class OrangeHRMTest(unittest.TestCase):
         cls.driver.maximize_window()
     def test_homePageTitle(self):
         self.driver.get("https://opensource-demo.orangehrmlive.com")
-        self.assertEqual("OrangeHR",self.driver.title,"titles does not match")
+        self.assertEqual("OrangeHRM",self.driver.title,"titles does not match")
     def test_login(self):
         self.driver.get("https://opensource-demo.orangehrmlive.com")
         self.driver.find_element_by_id("txtUsername").send_keys("Admin")
@@ -22,4 +22,4 @@ class OrangeHRMTest(unittest.TestCase):
         print("Test completed")
 
 if __name__ == "__main__":
-    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="Reports"))
+    unittest.main(testRunner=HtmlTestRunner.HTMLTestRunner(output="reports"))
